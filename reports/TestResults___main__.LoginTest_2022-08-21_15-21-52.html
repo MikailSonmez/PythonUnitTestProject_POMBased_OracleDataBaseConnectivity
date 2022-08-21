@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2022-08-21 15:21:52</p>
+                <p class='attribute'><strong>Duration: </strong>2.45 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 2, Pass: 1, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">testDownClass</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_login</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x010378B3+2193587]
+	Ordinal0 [0x00FD0681+1771137]
+	Ordinal0 [0x00EE4070+802928]
+	Ordinal0 [0x00F074BD+947389]
+	Ordinal0 [0x00F086E6+952038]
+	GetHandleVerifier [0x012E0CB2+2738370]
+	GetHandleVerifier [0x012D21B8+2678216]
+	GetHandleVerifier [0x010C17AA+512954]
+	GetHandleVerifier [0x010C0856+509030]
+	Ordinal0 [0x00FD743B+1799227]
+	Ordinal0 [0x00FDBB68+1817448]
+	Ordinal0 [0x00FDBC55+1817685]
+	Ordinal0 [0x00FE5230+1856048]
+	BaseThreadInitThunk [0x758AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77447A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77447A6E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\mikai\PycharmProjects\PythonUnitTestProject_POMBased\testCases\LoginTest.py", line 25, in test_login
+    lp.setUserName(self.driver)
+  File "C:\/Users/mikai/PycharmProjects/PythonUnitTestProject_POMBased\pageObjects\LoginPage.py", line 16, in setUserName
+    self.driver.find_element(By.ID, self.textbox_username_id).send_keys(username)
+  File "C:\Users\mikai\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 856, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\mikai\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 434, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\mikai\AppData\Local\Programs\Python\Python310\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x010378B3+2193587]
+	Ordinal0 [0x00FD0681+1771137]
+	Ordinal0 [0x00EE4070+802928]
+	Ordinal0 [0x00F074BD+947389]
+	Ordinal0 [0x00F086E6+952038]
+	GetHandleVerifier [0x012E0CB2+2738370]
+	GetHandleVerifier [0x012D21B8+2678216]
+	GetHandleVerifier [0x010C17AA+512954]
+	GetHandleVerifier [0x010C0856+509030]
+	Ordinal0 [0x00FD743B+1799227]
+	Ordinal0 [0x00FDBB68+1817448]
+	Ordinal0 [0x00FDBC55+1817685]
+	Ordinal0 [0x00FE5230+1856048]
+	BaseThreadInitThunk [0x758AFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77447A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77447A6E+238]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 1, Error: 1 -- Duration: 2.45 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
